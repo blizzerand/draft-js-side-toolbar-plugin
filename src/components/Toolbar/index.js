@@ -101,7 +101,8 @@ class Toolbar extends React.Component {
   };
 
   render() {
-    const { theme, store, customTheme } = this.props;
+    const { store, customTheme } = this.props;
+    let { theme } = this.props;
     theme.blockTypeSelectStyles
       ? (theme.blockTypeSelectStyles = {
           ...theme.blockTypeSelectStyles,
