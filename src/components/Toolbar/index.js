@@ -34,6 +34,7 @@ class Toolbar extends React.Component {
   };
 
   componentDidMount() {
+    console.log("hence");
     this.props.store.subscribeToItem("editorState", this.onEditorStateChange);
   }
 
@@ -46,7 +47,7 @@ class Toolbar extends React.Component {
 
   onEditorStateChange = editorState => {
     const selection = editorState.getSelection();
-    if (!selection.getHasFocus()) {
+    if (!selection.getHasFocus() && this.props.fieldHasFocus !== "visible") {
       this.setState({
         position: {
           transform: "scale(0)"
@@ -101,6 +102,7 @@ class Toolbar extends React.Component {
   };
 
   render() {
+    console.log("inside render");
     const { store, customTheme } = this.props;
     let { theme } = this.props;
     theme.blockTypeSelectStyles
