@@ -34,7 +34,6 @@ class Toolbar extends React.Component {
   };
 
   componentDidMount() {
-    console.log("hence");
     this.props.store.subscribeToItem("editorState", this.onEditorStateChange);
   }
 
@@ -102,7 +101,6 @@ class Toolbar extends React.Component {
   };
 
   render() {
-    console.log("inside render");
     const { store, customTheme } = this.props;
     let { theme } = this.props;
     theme.blockTypeSelectStyles

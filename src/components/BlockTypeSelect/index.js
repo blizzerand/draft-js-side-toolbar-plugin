@@ -32,8 +32,6 @@ class BlockTypeSelect extends React.Component {
   };
 
   render() {
-    console.log("hence");
-
     const { theme, getEditorState, setEditorState } = this.props;
     return (
       <div
